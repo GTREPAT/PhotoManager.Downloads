@@ -1,5 +1,4 @@
-// Public release metadata only. Never put a GitHub token in browser code.
-const repository = 'GTREPAT/PhotoManager.Downloads';
+const repository = websiteMessages.repository;
 const title = document.querySelector('#release-title');
 const status = document.querySelector('#release-status');
 const link = document.querySelector('#download-link');
@@ -10,27 +9,29 @@ async function loadRelease() {
       headers: { Accept: 'application/vnd.github+json' }, signal: AbortSignal.timeout(8000)
     });
     if (response.status === 404) {
-      status.textContent = 'Todavía no hay un instalador público disponible. Consulta aquí las próximas versiones.';
+      status.textContent = websiteMessages.unavailable;
       return;
     }
     if (!response.ok) throw new Error(`Release lookup: ${response.status}`);
     const release = await response.json();
-    title.textContent = release.tag_name ? `PhotoManager ${release.tag_name}` : 'Última versión';
     const asset = (release.assets || []).find(item => /^PhotoManager-Setup-.*\.exe$/i.test(item.name));
     if (!asset) {
-      status.textContent = 'La versión está publicada, pero todavía no incluye el instalador para Windows.';
+      status.textContent = websiteMessages.missing;
       return;
     }
     const download = new URL(asset.browser_download_url);
-    if (download.protocol !== 'https:' || download.hostname !== 'github.com' || !download.pathname.startsWith(`/${repository}/releases/download/`)) throw new Error('Unexpected download URL');
+    if (download.protocol !== 'https:' || download.hostname !== 'github.com'
+      || !download.pathname.startsWith(`/${repository}/releases/download/`)) throw new Error('Unexpected download URL');
+    title.textContent = release.tag_name ? `PhotoManager ${release.tag_name}` : websiteMessages.latestTitle;
     link.href = download.href;
-    link.textContent = 'Descargar para Windows';
-    status.textContent = 'Última versión estable disponible.';
+    link.textContent = websiteMessages.download;
+    status.textContent = websiteMessages.latest;
     const date = new Date(release.published_at);
-    const size = Number.isFinite(asset.size) ? `${(asset.size / 1024 / 1024).toFixed(1)} MB` : 'EXE';
-    meta.textContent = `${size} · Windows x64${Number.isNaN(date.getTime()) ? '' : ` · ${date.toLocaleDateString('es-ES')}`}`;
+    const size = Number.isFinite(asset.size)
+      ? `${new Intl.NumberFormat(websiteMessages.dateLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(asset.size / 1024 / 1024)} MB` : 'EXE';
+    meta.textContent = `${size} · Windows x64${Number.isNaN(date.getTime()) ? '' : ` · ${date.toLocaleDateString(websiteMessages.dateLocale)}`}`;
   } catch {
-    status.textContent = 'No se ha podido comprobar la última versión. Consulta las descargas en GitHub.';
+    status.textContent = websiteMessages.error;
   }
 }
 loadRelease();

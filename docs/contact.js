@@ -4,8 +4,8 @@ copyEmail.hidden = false;
 copyEmail.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText('gerardtrepat@gmail.com');
-    copyStatus.textContent = 'Correo copiado.';
+    copyStatus.textContent = websiteMessages.copied;
   } catch {
-    copyStatus.textContent = 'No se pudo copiar. Selecciona la dirección y cópiala manualmente.';
+    copyStatus.textContent = websiteMessages.copyError;
   }
 });
