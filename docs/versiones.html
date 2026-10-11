@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Historial de versiones — PhotoManager</title>
-  <meta name="description" content="Todos los cambios de PhotoManager 1.0.0.23: Catálogo, Rostros, edición, RAW, paseos guiados y recuperación de procesos.">
+  <meta name="description" content="Novedades de PhotoManager 1.0.0.24 y cambios de la 1.0.0.23: revelado RAW, LUTs, presets, organización, rendimiento y seguridad.">
   <meta name="theme-color" content="#111313">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,7 @@
   <link rel="alternate" hreflang="ca" href="https://gtrepat.github.io/PhotoManager.Downloads/ca/versions.html">
   <link rel="alternate" hreflang="en" href="https://gtrepat.github.io/PhotoManager.Downloads/en/releases.html">
   <link rel="alternate" hreflang="x-default" href="https://gtrepat.github.io/PhotoManager.Downloads/versiones.html">
-  <script id="site-messages" type="application/json">{"language":"Idioma","interfaceNote":"Los nombres de los controles de la aplicación se muestran en castellano para que puedas encontrarlos.","unavailable":"No se ha podido consultar la versión publicada. Puedes descargar la 1.0.0.23 con el botón.","missing":"La versión consultada todavía no incluye instalador. Sigue disponible la descarga de la 1.0.0.23.","error":"No se ha podido comprobar la última versión. Sigue disponible la descarga de la 1.0.0.23.","download":"Descargar para Windows","latest":"Última versión estable disponible.","latestTitle":"Última versión","copied":"Correo copiado.","copyError":"No se pudo copiar. Selecciona la dirección y cópiala manualmente.","dateLocale":"es-ES","repository":"GTREPAT/PhotoManager.Downloads"}</script>
+  <script id="site-messages" type="application/json">{"language":"Idioma","interfaceNote":"Los nombres de los controles de la aplicación se muestran en castellano para que puedas encontrarlos.","unavailable":"No se ha podido consultar la versión publicada. Puedes descargar la 1.0.0.24 con el botón.","missing":"La versión consultada todavía no incluye instalador. Sigue disponible la descarga de la 1.0.0.24.","error":"No se ha podido comprobar la última versión. Sigue disponible la descarga de la 1.0.0.24.","download":"Descargar para Windows","latest":"Última versión estable disponible.","latestTitle":"Última versión","copied":"Correo copiado.","copyError":"No se pudo copiar. Selecciona la dirección y cópiala manualmente.","dateLocale":"es-ES","repository":"GTREPAT/PhotoManager.Downloads"}</script>
   <script src="i18n.js" defer></script>
 </head>
 <body>
@@ -24,9 +24,26 @@
   <nav class="language-switch" aria-label="Idioma"><a href="versiones.html" lang="es" hreflang="es" data-language="es" aria-current="page">Castellano</a><a href="ca/versions.html" lang="ca" hreflang="ca" data-language="ca">Català</a><a href="en/releases.html" lang="en" hreflang="en" data-language="en">English</a></nav>
 </header>
 <main id="contenido" class="section wrap">
-  <div class="section-heading"><div><p class="eyebrow">EVOLUCIÓN DEL PRODUCTO</p><h1>Historial de versiones</h1></div><p>Las novedades, mejoras y correcciones de cada versión de PhotoManager. Última versión: <a class="text-link" href="#version-1-0-0-23">1.0.0.23</a>.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">EVOLUCIÓN DEL PRODUCTO</p><h1>Historial de versiones</h1></div><p>Consulta las novedades de la 1.0.0.24 y el historial anterior. Versión publicada: <a class="text-link" href="#version-1-0-0-24">1.0.0.24</a>.</p></div>
+    <article id="version-1-0-0-24" class="release-entry" aria-labelledby="release24-title">
+      <div class="release-meta"><span class="tag">NOVEDADES · 1.0.0.24</span></div>
+      <h2 id="release24-title">PhotoManager 1.0.0.24</h2>
+      <p class="release-status">La versión 1.0.0.24 ya está disponible. Publicada el 11/10/2026.</p>
+      <p>Esta actualización amplía la edición fotográfica y hace más cómoda la gestión de colecciones grandes. Estas notas describen las funciones finales, no las fases intermedias de desarrollo.</p>
+      <div class="release-details">
+        <details open><summary>Revelado RAW y calidad de imagen</summary><ul><li>Decodificación de alta precisión, ajustes y cachés intermedias en coma flotante, balance de blancos en luz lineal y aprovechamiento de altas luces parcialmente saturadas cuando el RAW conserva información.</li><li>Reducción de ruido de luminosidad y color, enfoque con protección de ruido e inspección al 100 % con arrastre. Mejor coherencia de color entre editor y miniaturas, y correcciones de compatibilidad para Canon EOS R1 y vistas previas Nikon Z9.</li></ul></details>
+        <details open><summary>LUTs y presets</summary><ul><li>Biblioteca de LUTs con previsualizaciones, categorías y favoritos; importación múltiple .cube y gestión desde Configuración. Intensidad regulable y aplicación global, por máscara o por lotes, conservando los demás ajustes.</li><li>Presets por bloques con miniatura de ejemplo, comparación antes de aplicar y deshacer en un paso. Gestión para renombrar, duplicar, eliminar e importar/exportar con sus LUTs. Borrar un preset no elimina los ajustes ya aplicados.</li></ul></details>
+        <details><summary>Luz, color y curvas</summary><ul><li>Un único Auto propone luz, contraste y viveza sobre la edición actual. Permite revisar los valores e intensidad, cancelar o aplicar en un paso de deshacer, sin cambiar el balance de blancos. Comparación temporal por bloque y avisos de recorte vinculados al ajuste.</li><li>HSL se ajusta pulsando y arrastrando sobre la fotografía, con amplitud, suavidad y resaltado orientativo del rango. Curvas permite localizar el tono bajo el puntero y añadir o seleccionar puntos desde la imagen.</li></ul></details>
+        <details><summary>Recorte, perspectiva y exportación</summary><ul><li>Enderezado mediante una línea de horizonte y perspectiva con guías de cuatro puntos ajustables. Comparación previa, intensidad regulable y recorte automático opcional de bordes vacíos.</li><li>Proporciones propias y estimación de encuadre y resolución. Exportación con ancho y alto en píxeles, ajustando o rellenando sin deformar; PNG y TIFF de 8 o 16 bits por canal, también en lotes.</li></ul></details>
+        <details><summary>Organización y navegación</summary><ul><li>Etiquetas de carpetas con identificador, nombre y color, independientes de Rostros; creación, edición, fusión y filtros por todas, cualquiera o sin etiquetas.</li><li>Navegación con teclado, selección con un clic y apertura con doble clic o Enter. Vista original/editada en detalle del catálogo y Rostros, y retorno a la última fotografía seleccionada cuando pertenece a la vista.</li></ul></details>
+        <details><summary>Trabajo por lotes</summary><ul><li>Acciones agrupadas por finalidad: aplicar LUTs y presets, copiar o restablecer bloques, clasificar por estrellas y color y exportar. El formulario recuerda la última acción confirmada sin ejecutarla automáticamente.</li><li>Renombrado con previsualización, comprobación de colisiones y conservación de archivos asociados. Los lotes compatibles muestran progreso, permiten cancelar y recuperan tareas pendientes.</li></ul></details>
+        <details><summary>Movimiento y profundidad 3D</summary><ul><li>Flujo en tres pasos con reproducción, pausa y recorrido de la secuencia antes de exportar. Mejores bordes y reconstrucción del fondo, con avisos de mapas poco fiables y límites conservadores de movimiento.</li><li>Corrección manual del mapa con pinceles de acercar, alejar y suavizar, explicaciones, comparación y deshacer. Restablecer mapa recupera la base anterior incluso después de aplicar las correcciones.</li></ul></details>
+        <details><summary>Rendimiento, comodidad y seguridad</summary><ul><li>Miniaturas de Rostros y detalle del catálogo limitadas a la zona visible y un margen, con liberación y cancelación de cargas innecesarias. Menor consumo al abrir carpetas RAW, reutilización de originales recientes y mejoras de caché.</li><li>Inicio automático opcional de ComfyUI, mensajes técnicos del editor ocultos por defecto y controles más homogéneos. Migración a .NET 10 y actualización de dependencias para corregir vulnerabilidades conocidas.</li></ul></details>
+      </div>
+      <a class="text-link" href="index.html#edicion">Del revelado a tu propio estilo.</a>
+    </article>
     <article id="version-1-0-0-23" class="release-entry">
-      <div class="release-meta"><span class="tag">ÚLTIMA VERSIÓN · 1.0.0.23</span></div>
+      <div class="release-meta"><span class="tag">VERSIÓN ANTERIOR · 1.0.0.23</span></div>
       <h2>PhotoManager 1.0.0.23</h2>
       <p>Esta versión reúne las mejoras de Catálogo, Rostros, navegación RAW, edición y recuperación de procesos. Consulta las mejoras y correcciones agrupadas por área.</p>
       <div class="release-details">
