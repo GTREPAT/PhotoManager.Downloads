@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Historial de versions — PhotoManager</title>
-  <meta name="description" content="Novetats de PhotoManager 1.0.0.24 i canvis de la 1.0.0.23: revelat RAW, LUTs, presets, organització, rendiment i seguretat.">
+  <meta name="description" content="Novetats de PhotoManager 1.0.0.25: vídeo i música, fotos semblants, màscares automàtiques, revelatge RAW i gestió del catàleg. Historial de les versions anteriors.">
   <meta name="theme-color" content="#111313">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
@@ -12,7 +12,7 @@
   <link rel="alternate" hreflang="ca" href="https://gtrepat.github.io/PhotoManager.Downloads/ca/versions.html">
   <link rel="alternate" hreflang="en" href="https://gtrepat.github.io/PhotoManager.Downloads/en/releases.html">
   <link rel="alternate" hreflang="x-default" href="https://gtrepat.github.io/PhotoManager.Downloads/versiones.html">
-  <script id="site-messages" type="application/json">{"language":"Idioma","interfaceNote":"Els noms dels controls de l’aplicació es mostren en castellà perquè els puguis trobar.","unavailable":"No s’ha pogut consultar la versió publicada. Pots descarregar la 1.0.0.24 amb el botó.","missing":"La versió consultada encara no inclou instal·lador. La descàrrega de la 1.0.0.24 continua disponible.","error":"No s’ha pogut comprovar l’última versió. La descàrrega de la 1.0.0.24 continua disponible.","download":"Descarrega per a Windows","latest":"Última versió estable disponible.","latestTitle":"Última versió","copied":"Correu copiat.","copyError":"No s’ha pogut copiar. Selecciona l’adreça i copia-la manualment.","dateLocale":"ca-ES","repository":"GTREPAT/PhotoManager.Downloads"}</script>
+  <script id="site-messages" type="application/json">{"language":"Idioma","interfaceNote":"Els noms dels controls de l’aplicació es mostren en castellà perquè els puguis trobar.","unavailable":"La publicació de la versió 1.0.0.25 encara no està disponible a GitHub.","missing":"La versió consultada encara no inclou instal·lador. La descàrrega de la 1.0.0.25 continua disponible.","error":"No s’ha pogut comprovar l’última versió. La descàrrega de la 1.0.0.25 continua disponible.","download":"Descarrega per a Windows","latest":"Última versió estable disponible.","latestTitle":"Última versió","copied":"Correu copiat.","copyError":"No s’ha pogut copiar. Selecciona l’adreça i copia-la manualment.","dateLocale":"ca-ES","versionLabel":"Versió","repository":"GTREPAT/PhotoManager.Downloads","version":"1.0.0.25"}</script>
   <script src="../i18n.js" defer></script>
 </head>
 <body>
@@ -20,11 +20,22 @@
 <header class="header wrap">
   <a class="brand" href="index.html" aria-label="PhotoManager, inici"><img src="../assets/favicon.svg" width="32" height="32" alt="">PhotoManager<span class="brand-dot">.</span></a>
   <nav aria-label="Navegació principal"><a href="index.html#biblioteca">El producte</a><a href="versions.html" aria-current="page">Historial de versions</a><a href="index.html#contacto">Contacte</a></nav>
-  <a class="button small" href="index.html#descarga">Descarrega</a>
   <nav class="language-switch" aria-label="Idioma"><a href="../versiones.html" lang="es" hreflang="es" data-language="es">Castellano</a><a href="versions.html" lang="ca" hreflang="ca" data-language="ca" aria-current="page">Català</a><a href="../en/releases.html" lang="en" hreflang="en" data-language="en">English</a></nav>
 </header>
 <main id="contenido" class="section wrap">
-  <div class="section-heading"><div><p class="eyebrow">EVOLUCIÓ DEL PRODUCTE</p><h1>Historial de versions</h1></div><p>Consulta les novetats de la 1.0.0.24 i l'historial anterior. Versió publicada: <a class="text-link" href="#version-1-0-0-24">1.0.0.24</a>.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">EVOLUCIÓ DEL PRODUCTE</p><h1>Historial de versions</h1></div><p>Consulta les novetats i l’historial anterior. Versió publicada: <a class="text-link" href="#version-1-0-0-25">1.0.0.25</a>.</p></div>
+<article id="version-1-0-0-25" class="release-entry" aria-labelledby="release25-title">
+ <div class="release-meta"><time datetime="2026-10-23">23/10/2026</time></div>
+ <h2 id="release25-title">Versió 1.0.0.25</h2><p class="release-status">Publicada el 23/10/2026 · Windows 10 i 11 x64 · .NET inclòs.</p><p>Aquesta versió amplia el treball amb fotografies i vídeo, des de la selecció de preses fins al muntatge amb música. També incorpora màscares automàtiques i millores del revelatge RAW, la navegació i la recuperació de treballs.</p>
+ <div class="release-details"><details open><summary>Vídeo i música</summary><ul><li>Reproducció integrada sense inici automàtic, amb posició, volum i metadades. Els vídeos apareixen al catàleg amb filtres, comptador propi i vistes prèvies quan el format ho permet.</li><li>Crear vídeo permet ordenar fotografies arrossegant i exportar MP4 amb durada configurable, moviments i transicions, formats 16:9, 9:16 o 1:1 i resolució fins a 4K.</li><li>Música amb volum, repetició i fosos. Biblioteca amb etiquetes manuals i classificació local opcional de gènere, ambient i instruments; selecció i muntatge assistits per Ollama.</li></ul></details>
+<details open><summary>Fotos semblants i qualitat</summary><ul><li>Revisió de grups amb preferida, preses per conservar i candidates a descart. Es guarden les decisions i l’últim grup obert; les cerques repetides integren coincidències.</li><li>Valoració tècnica de nitidesa, moviment i retall tonal, complementada opcionalment per IA local experimental. Les discrepàncies es mostren sense imposar una guanyadora.</li><li>Els descarts només s’eliminen després de confirmar i s’envien a la Paperera amb els fitxers associats. Els errors queden pendents de reintent.</li></ul></details>
+<details><summary>Màscares i retoc</summary><ul><li>Galeria de màscares automàtiques de cel, persones, animals, vegetació, arquitectura i parts del rostre, segons els models disponibles. Cal revisar els resultats.</li><li>Selecció de pell facial, millores del suavitzat i detecció automàtica d’ulls vermells com a complement de la correcció manual.</li><li>Millores del tractament tonal i de color RAW amb referència al JPEG de càmera quan està disponible, i ajustos de nitidesa, reducció de soroll i propostes automàtiques.</li></ul></details>
+<details><summary>Catàleg i navegació</summary><ul><li>Creació de carpetes buides i trasllat de contingut entre carpetes del catàleg amb tractament de noms repetits i recuperació de trasllats interromputs.</li><li>Miniatures en diverses files, tira horitzontal o columna vertical, amb densitat configurable, menús contextuals i la selecció visible en canviar d’orientació.</li><li>Accions de carpeta més accessibles, reconeixement facial des del catàleg i accés a la web al costat de Procesos i Configuración, també a l’editor.</li></ul></details>
+<details><summary>Rendiment i continuïtat</summary><ul><li>Previsualització adaptada al zoom, memòria cau de renderització i processament de la regió visible en operacions compatibles. La galeria de miniatures utilitza un panell virtualitzat.</li><li>Recuperació de treballs interromputs de semblants, selecció, música i generació de vídeo. L’exportació de vídeo pot reiniciar-se des del principi.</li><li>Corregida la comunicació d’errors en iniciar el motor musical. Verificació de la versió: 1.264 proves superades, cap de fallida ni omesa, inclosa una integració real amb Ollama.</li></ul></details>
+<details><summary>Requisits i límits</summary><ul><li>Windows 10/11 x64, amb .NET inclòs. La IA local requereix els models corresponents; les funcions visuals d’Ollama també requereixen aquest servei. La valoració de qualitat amb IA és experimental.</li><li>L’instal·lador d’aquesta versió no té signatura digital. Comprova’n l’origen i el SHA-256 abans d’instal·lar. L’absència de signatura pot provocar avisos de Windows.</li><li>Els vídeos es reprodueixen i es generen, però no s’editen com a fotografies. No s’inclou previsualització completa del muntatge ni un sistema de projectes de vídeo múltiples.</li></ul></details></div>
+ <p class="micro">SHA-256 de l’instal·lador: <code class="release-hash">b3f14a269e608b4d5179e5a4ee035c7a5635fcca6f07d632562de6393decc0d5</code></p>
+ <p class="micro"><a class="text-link" href="https://github.com/GTREPAT/PhotoManager.Downloads/releases/download/v1.0.0.25/PRIVACY.md">Privacitat</a> · <a class="text-link" href="https://github.com/GTREPAT/PhotoManager.Downloads/releases/download/v1.0.0.25/CODE-SIGNING-POLICY.md">Code signing policy</a></p>
+ </article>
     <article id="version-1-0-0-24" class="release-entry" aria-labelledby="release24-title">
       <div class="release-meta"><span class="tag">NOVETATS · 1.0.0.24</span></div>
       <h2 id="release24-title">PhotoManager 1.0.0.24</h2>
@@ -86,8 +97,8 @@
       <p class="micro">Requisits: Windows 10 i 11 de 64 bits. L’instal·lador inclou l’entorn .NET necessari.</p>
       <a class="text-link" href="https://github.com/GTREPAT/PhotoManager.Downloads/releases">Consulta versions i instal·ladors publicats</a>
     </article>
-  <div class="actions" style="margin-top:32px"><a class="button" href="index.html#descarga">Descarrega PhotoManager</a><a class="text-link" href="index.html">Torna al producte</a></div>
+  <div class="actions" style="margin-top:32px"><a class="text-link" href="index.html">Torna al producte</a></div>
 </main>
-<footer class="wrap"><a class="brand" href="index.html">PhotoManager<span class="brand-dot">.</span></a><p>Comprèn les teves fotografies. Retoca amb criteri.</p><a href="index.html#descarga">Descàrregues</a></footer>
+<footer class="wrap"><a class="brand" href="index.html">PhotoManager<span class="brand-dot">.</span></a><p>Comprèn les teves fotografies. Retoca amb criteri.</p></footer>
 </body>
 </html>

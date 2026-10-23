@@ -5,7 +5,7 @@ const link = document.querySelector('#download-link');
 const meta = document.querySelector('#release-meta');
 async function loadRelease() {
   try {
-    const response = await fetch(`https://api.github.com/repos/${repository}/releases/latest`, {
+    const response = await fetch(`https://api.github.com/repos/${repository}/releases/tags/v${websiteMessages.version}`, {
       headers: { Accept: 'application/vnd.github+json' }, signal: AbortSignal.timeout(8000)
     });
     if (response.status === 404) {
@@ -22,7 +22,7 @@ async function loadRelease() {
     const download = new URL(asset.browser_download_url);
     if (download.protocol !== 'https:' || download.hostname !== 'github.com'
       || !download.pathname.startsWith(`/${repository}/releases/download/`)) throw new Error('Unexpected download URL');
-    title.textContent = release.tag_name ? `PhotoManager ${release.tag_name}` : websiteMessages.latestTitle;
+    title.textContent = release.tag_name ? `${websiteMessages.versionLabel} ${release.tag_name.replace(/^v/i, "")}` : websiteMessages.latestTitle;
     link.href = download.href;
     link.textContent = websiteMessages.download;
     status.textContent = websiteMessages.latest;
